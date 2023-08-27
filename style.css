@@ -135,7 +135,6 @@ table {
 /* === */
 
 body {
-
   width: 100vw;
   height: 100%;
   margin: 0;
@@ -144,21 +143,35 @@ body {
   overflow-x: hidden;
 }
 
-#squares-canvas {
-  width: 100vw;
+#face-canvas,
+#squares-canvas,
+#landscape-canvas {
+  width: 100vw; 
   height: 100vh;
-  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
   z-index: 999;
-  background-color: #fff;
+  background-color: #000000;
 }
 
-#squares-canvas canvas {
+#landscape-canvas {
+  background-color: #0F5193;
+}
+
+#squares-section,
+#faces-section,
+#landscape-section {
+  position: relative;
+}
+
+canvas {
   width: 100%;
   height: 100%;
 }
 
 .section {
   width: 100%;
-  height: 500vh;
+  height: 100vh;
   position: relative;
 }
